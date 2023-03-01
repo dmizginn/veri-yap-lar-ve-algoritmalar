@@ -1,0 +1,67 @@
+Proje 1
+[22,27,16,2,18,6] -> Selection Short
+
+Yukarı verilen dizinin Selection sort türüne göre aşamalarını yazınız.
+1 - [22,27,16,2,18,6] ilk hali
+2 - [2,27,16,22,18,6] 2 seçilip başa alındı
+3 - [2,6,16,22,18,27] 6 seçilip 2. sıraya alındı
+4 - [2,6,16,22,18,27] 16 seçilip 3. sıraya alındı
+5 - [2,6,16,18,22,27] 18 seçilip 4. sıraya alındı
+6 - [2,6,16,18,22,27] 22 seçildi minumum olduğu için yerinde kaldı
+
+Big-O gösterimini yazınız. ==> Selection sort algoritması, verilen n elemanlı bir diziyi sıralamak için O(n^2) zaman karmaşıklığına sahiptir.
+
+Time Complexity: Dizi sıralandıktan sonra 18 sayısı aşağıdaki case'lerden hangisinin kapsamına girer? Yazınız
+
+Average case: Aradığımız sayının ortada olması
+Worst case: Aradığımız sayının sonda olması
+Best case: Aradığımız sayının dizinin en başında olması.
+
+==>18 sayısı dördüncü eleman olarak dizide yer alır bu nedenle,"average case" kapsamına girer.
+
+
+Proje 2
+[16,21,11,8,12,22] -> Merge Sort
+Yukarıdaki dizinin sort türüne göre aşamalarını yazınız.
+
+1 - [16,21,11,8,12,22] -> İlk hali
+2 - [16,21,11,8,12,22] => Sol yarısını [16, 21, 11] ve sağ yarısını [8, 12, 22] olacak şekilde ikiye ayırırız
+3 - [16,21,11] => Sol yarısını [16] ve sağ yarısını [21, 11] olacak şekilde ikiye ayırırız
+4 - [21,11] => Sol yarısını [21] ve sağ yarısını [11] olacak şekilde ikiye ayırırız
+5 - [16] ve [11] => Bu iki küçük diziyi birleştirerek [11, 16] dizisini elde ederiz
+6 - [21] => Sağ yarısındaki tek elemanı direk sonuç dizisine ekleriz
+7 - [11,16] ve [21] => Bu iki küçük diziyi birleştirerek [11, 16, 21] dizisini elde ederiz
+8 - [8,12,22] => Sol yarısını [8] ve sağ yarısını [12, 22] olacak şekilde ikiye ayırırız
+9 - [12,22] => Sol yarısını [12] ve sağ yarısını [22] olacak şekilde ikiye ayırırız
+10 - [8] ve [12] => Bu iki küçük diziyi birleştirerek [8, 12] dizisini elde ederiz
+11 - [22] => Sağ yarısındaki tek elemanı direk sonuç dizisine ekleriz
+12 - [8,12] ve [22] => Bu iki küçük diziyi birleştirerek [8, 12, 22] dizisini elde ederiz
+13 - [11,16,21] ve [8,12,22] => Bu iki sıralanmış diziyi birleştirerek sonuç olarak [8, 11, 12, 16, 21, 22] dizisini elde ederiz
+14 - [8, 11, 12, 16, 21, 22]
+
+
+Big-O gösterimini yazınız. ==> O(nlogn)
+
+
+
+Proje 3
+[7, 5, 1, 8, 3, 6, 0, 9, 4, 2] dizisinin Binary-Search-Tree aşamalarını yazınız.
+
+         7
+        / \
+       5   8
+      / \   \
+     1   6   9
+    / \     /
+   0   3   4
+      / \
+     2   0
+
+1 - Root elemanı 7'dir.
+2 - Root'un sağından 8 bulunur.
+3 - Solunda 5 bulunur.
+4 - 5'in solunda 1, 1'in solunda 0, 1'in sağında 3, 3'ün solunda 2, 3'ün sağında 4 ve 5'in sağından 6 bulunur.
+5 - 8'in sağından 9 bulunur.
+6 - 9'un solunda 4 bulunur.
+
+Örnek: root x'dir. root'un sağından y bulunur. Solunda z bulunur vb.
